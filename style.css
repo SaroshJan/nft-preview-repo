@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --paraFont: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--mainBG);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--cardBG);
+    width: 330px;
+    padding: 22px;
+    border-radius: 13px;
+}
+
+.img-container {
+    position: relative;
+}
+
+.eth-img {
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img-container::before {
+    content: '';
+    background: url(/images/icon-view.svg) no-repeat center, hsl(178 100% 50%/ 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    display: none;
+}
+
+.img-container:hover.img-container::before {
+    display: block;
+}
+
+.about {
+    margin-top: 25px;
+}
+
+.main-heading {
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--white);
+    font-weight: 600;
+    transition: color .3s ease;
+}
+
+.main-heading:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.main-para {
+    color: var(--softBlue);
+    line-height: 1.5;
+}
+
+.detail {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-eth-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.detail-eth-para {
+    color: var(--cyan);
+    margin: 0;
+}
+
+.detail-days-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.detail-days-para {
+    color: var(--softBlue);
+    margin: 0;
+}
+
+.line {
+    border: 1px solid var(--line);
+}
+
+.author {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-img {
+    display: block;
+    object-fit: cover;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.author-para {
+    color: var(--softBlue);
+    margin: 0;
+}
+
+.author-link {
+    text-decoration: none;
+    color: white;
+    transition: color .3s ease;
+}
+
+.author-link:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
